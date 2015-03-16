@@ -20,9 +20,17 @@
         self.navigationItem.rightBarButtonItem=next;
     }
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 250, 250)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
     imageView.image = _letra.imagemLetra;
     [imageView setCenter:self.view.center];
+    
+    [UIView animateWithDuration:1.0
+                          delay:0.2
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^(void) {
+                         imageView.frame = CGRectMake(0, 0, 250, 250);
+                         [imageView setCenter:self.view.center];
+                     }completion:nil];
     
     UIButton *botao = [UIButton buttonWithType:UIButtonTypeSystem];
     [botao
@@ -30,7 +38,6 @@
      forState:UIControlStateNormal];
     [botao sizeToFit];
     [botao setCenter:CGPointMake(imageView.center.x, imageView.center.y+180)];
-    //botao.center = self.view.center;
     
     [self.view addSubview:botao];
     [self.view addSubview:imageView];
@@ -44,8 +51,7 @@
                                      initWithNibName:nil
                                      bundle:NULL];
     proximo.letra = [_alfabeto proximaLetra];
-    [self.navigationController pushViewController:proximo
-                                         animated:YES];
+    [self.navigationController pushViewController:proximo animated:NO];
 }
 
 @end
