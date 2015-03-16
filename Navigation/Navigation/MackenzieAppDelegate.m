@@ -7,15 +7,17 @@
 //
 
 #import "MackenzieAppDelegate.h"
-#import "LetraAViewController.h"
+#import "DicionarioViewController.h"
 
 @implementation MackenzieAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    LetraAViewController *viewController = [[LetraAViewController alloc]
-                                           initWithNibName:nil
-                                           bundle:nil];
+//    LetraAViewController *viewController = [[LetraAViewController alloc]
+//                                           initWithNibName:nil
+//                                           bundle:nil];
+    DicionarioViewController *viewController = [[DicionarioViewController alloc] initWithNibName:nil bundle:nil];
+    viewController.letra = [[Letra alloc] initWithLetra:@"A" andImagem:[UIImage imageNamed:@"arvore.png"] andPalavra:@"Árvore"];
     
     
     self.navigationController = [[UINavigationController alloc]
