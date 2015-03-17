@@ -8,19 +8,30 @@
 
 #import "MackenzieAppDelegate.h"
 #import "ImagemGrandeViewController.h"
+#import "DicionarioTableViewController.h"
 
 @implementation MackenzieAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     ImagemGrandeViewController *igvc = [[ImagemGrandeViewController alloc] init];
-
     igvc.letra = [[Letra alloc] initWithLetra:@"A" andImagem:@"arvore" andPalavra:@"Árvore"];
     
-    self.navigationController = [[UINavigationController alloc] initWithRootViewController:igvc];
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = self.navigationController;
+    DicionarioTableViewController *dtvc = [[DicionarioTableViewController alloc] init];
     
+    self.tabBarController = [[UITabBarController alloc] init];
+    
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:igvc];
+    
+    self.tabBarController.viewControllers = @[self.navigationController,dtvc];
+    
+    igvc.navigationController.tabBarItem.title = @"Navegaçāo";
+    igvc.navigationController.tabBarItem.image = [UIImage imageNamed:@"turtle-26.png"];
+    dtvc.tabBarItem.title = @"Dicionário";
+    dtvc.tabBarItem.image = [UIImage imageNamed:@"book-26.png"];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = self.tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     

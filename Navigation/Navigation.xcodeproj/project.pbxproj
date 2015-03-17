@@ -35,7 +35,9 @@
 		1711B6521AB722E5006E0B92 /* yoga.png in Resources */ = {isa = PBXBuildFile; fileRef = 1711B6391AB722E5006E0B92 /* yoga.png */; };
 		1711B6531AB722E5006E0B92 /* zebra.png in Resources */ = {isa = PBXBuildFile; fileRef = 1711B63A1AB722E5006E0B92 /* zebra.png */; };
 		1711B6551AB72319006E0B92 /* arvore.png in Resources */ = {isa = PBXBuildFile; fileRef = 1711B6541AB72319006E0B92 /* arvore.png */; };
-		1774A59B1AB8A90C009295D7 /* PalavraGrandeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1774A59A1AB8A90C009295D7 /* PalavraGrandeViewController.m */; };
+		1774A59E1AB8AA83009295D7 /* DicionarioTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1774A59D1AB8AA83009295D7 /* DicionarioTableViewController.m */; };
+		177763E41AB8C2810045EE91 /* book-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 177763E31AB8C2810045EE91 /* book-26.png */; };
+		177763E61AB8C3520045EE91 /* turtle-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 177763E51AB8C3520045EE91 /* turtle-26.png */; };
 		17F07FA11AB87A4200E56C80 /* ImagemGrandeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F07FA01AB87A4200E56C80 /* ImagemGrandeViewController.m */; };
 		27156F4D18B76AF50053A99C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27156F4C18B76AF50053A99C /* Foundation.framework */; };
 		27156F4F18B76AF50053A99C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27156F4E18B76AF50053A99C /* CoreGraphics.framework */; };
@@ -92,8 +94,10 @@
 		1711B6391AB722E5006E0B92 /* yoga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yoga.png; sourceTree = "<group>"; };
 		1711B63A1AB722E5006E0B92 /* zebra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zebra.png; sourceTree = "<group>"; };
 		1711B6541AB72319006E0B92 /* arvore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arvore.png; sourceTree = "<group>"; };
-		1774A5991AB8A90C009295D7 /* PalavraGrandeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PalavraGrandeViewController.h; sourceTree = "<group>"; };
-		1774A59A1AB8A90C009295D7 /* PalavraGrandeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PalavraGrandeViewController.m; sourceTree = "<group>"; };
+		1774A59C1AB8AA83009295D7 /* DicionarioTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DicionarioTableViewController.h; sourceTree = "<group>"; };
+		1774A59D1AB8AA83009295D7 /* DicionarioTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DicionarioTableViewController.m; sourceTree = "<group>"; };
+		177763E31AB8C2810045EE91 /* book-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book-26.png"; sourceTree = "<group>"; };
+		177763E51AB8C3520045EE91 /* turtle-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "turtle-26.png"; sourceTree = "<group>"; };
 		17F07F9F1AB87A4200E56C80 /* ImagemGrandeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagemGrandeViewController.h; sourceTree = "<group>"; };
 		17F07FA01AB87A4200E56C80 /* ImagemGrandeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagemGrandeViewController.m; sourceTree = "<group>"; };
 		27156F4918B76AF50053A99C /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +145,8 @@
 		1711B61F1AB71621006E0B92 /* imagens */ = {
 			isa = PBXGroup;
 			children = (
+				177763E51AB8C3520045EE91 /* turtle-26.png */,
+				177763E31AB8C2810045EE91 /* book-26.png */,
 				1711B6541AB72319006E0B92 /* arvore.png */,
 				1711B6221AB722E5006E0B92 /* bola.png */,
 				1711B6231AB722E5006E0B92 /* casa.png */,
@@ -212,8 +218,8 @@
 				1711B61A1AB701ED006E0B92 /* Letra.m */,
 				17F07F9F1AB87A4200E56C80 /* ImagemGrandeViewController.h */,
 				17F07FA01AB87A4200E56C80 /* ImagemGrandeViewController.m */,
-				1774A5991AB8A90C009295D7 /* PalavraGrandeViewController.h */,
-				1774A59A1AB8A90C009295D7 /* PalavraGrandeViewController.m */,
+				1774A59C1AB8AA83009295D7 /* DicionarioTableViewController.h */,
+				1774A59D1AB8AA83009295D7 /* DicionarioTableViewController.m */,
 				27156F5E18B76AF50053A99C /* Images.xcassets */,
 				1711B61F1AB71621006E0B92 /* imagens */,
 				27156F5318B76AF50053A99C /* Supporting Files */,
@@ -337,6 +343,7 @@
 				1711B6551AB72319006E0B92 /* arvore.png in Resources */,
 				1711B64B1AB722E5006E0B92 /* relogio.png in Resources */,
 				1711B64D1AB722E5006E0B92 /* tartaruga.png in Resources */,
+				177763E41AB8C2810045EE91 /* book-26.png in Resources */,
 				1711B6501AB722E5006E0B92 /* windsurf.png in Resources */,
 				27156F5F18B76AF50053A99C /* Images.xcassets in Resources */,
 				1711B6431AB722E5006E0B92 /* jacare.png in Resources */,
@@ -344,6 +351,7 @@
 				1711B63B1AB722E5006E0B92 /* bola.png in Resources */,
 				1711B63F1AB722E5006E0B92 /* flor.png in Resources */,
 				1711B63C1AB722E5006E0B92 /* casa.png in Resources */,
+				177763E61AB8C3520045EE91 /* turtle-26.png in Resources */,
 				1711B6451AB722E5006E0B92 /* lampada.png in Resources */,
 				1711B6461AB722E5006E0B92 /* maca.png in Resources */,
 				1711B6421AB722E5006E0B92 /* indio.png in Resources */,
@@ -372,10 +380,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1774A59E1AB8AA83009295D7 /* DicionarioTableViewController.m in Sources */,
 				1711B61B1AB701ED006E0B92 /* Letra.m in Sources */,
 				27156F5D18B76AF50053A99C /* MackenzieAppDelegate.m in Sources */,
 				1711B6181AB7013C006E0B92 /* Alfabeto.m in Sources */,
-				1774A59B1AB8A90C009295D7 /* PalavraGrandeViewController.m in Sources */,
 				27156F5918B76AF50053A99C /* main.m in Sources */,
 				17F07FA11AB87A4200E56C80 /* ImagemGrandeViewController.m in Sources */,
 			);

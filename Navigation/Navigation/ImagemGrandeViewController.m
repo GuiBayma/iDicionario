@@ -10,6 +10,7 @@
 
 @implementation ImagemGrandeViewController {
     Alfabeto *alfabeto;
+    UIImageView *imageView;
 }
 
 - (void)viewDidLoad {
@@ -29,9 +30,10 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-    self.title = _letra.letra;
+    self.navigationController.tabBarItem.title = @"Navegaçāo";
+    self.navigationItem.title = _letra.letra;
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
     NSString *path = [[NSBundle mainBundle] pathForResource:_letra.imagemLetra ofType:@"png"];
     imageView.image = [UIImage imageWithContentsOfFile:path];
     [imageView setCenter:self.view.center];
@@ -53,6 +55,10 @@
     
     [self.view addSubview:botao];
     [self.view addSubview:imageView];
+}
+
+-(void) viewWillDisappear:(BOOL)animated {
+    imageView.image = nil;
 }
 
 -(void)next:(id)sender {

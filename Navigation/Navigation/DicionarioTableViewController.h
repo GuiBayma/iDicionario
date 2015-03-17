@@ -1,5 +1,5 @@
 //
-//  PalavraGrandeViewController.h
+//  DicionarioTableViewController.h
 //  Navigation
 //
 //  Created by Guilherme Bayma on 3/17/15.
@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Alfabeto.h"
+#import "Letra.h"
 
-@interface PalavraGrandeViewController : UIViewController
+@interface DicionarioTableViewController : UITableViewController
 
 @end
