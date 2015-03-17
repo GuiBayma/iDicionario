@@ -11,8 +11,8 @@
 @interface Letra : NSObject
 
 @property NSString *letra;
-@property UIImage *imagemLetra;
+@property NSString *imagemLetra;
 @property NSString *palavraLetra;
-- (instancetype)initWithLetra:(NSString *)letra andImagem:(UIImage *)imagem andPalavra:(NSString *)palavra;
+- (instancetype)initWithLetra:(NSString *)letra andImagem:(NSString *)imagem andPalavra:(NSString *)palavra;
 
 @end

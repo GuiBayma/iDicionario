@@ -28,31 +28,32 @@ static bool isFirstAccess = NO;
     if (self) {
         
         _abecedario = [[NSArray alloc] initWithObjects:
-                       [[Letra alloc] initWithLetra:@"B" andImagem:[UIImage imageNamed:@"bola.png"] andPalavra:@"Bola"],
-                       [[Letra alloc] initWithLetra:@"C" andImagem:[UIImage imageNamed:@"casa.png"] andPalavra:@"Casa"],
-                       [[Letra alloc] initWithLetra:@"D" andImagem:[UIImage imageNamed:@"dado.png"] andPalavra:@"Dado"],
-                       [[Letra alloc] initWithLetra:@"E" andImagem:[UIImage imageNamed:@"elefante.png"] andPalavra:@"Elefante"],
-                       [[Letra alloc] initWithLetra:@"F" andImagem:[UIImage imageNamed:@"flor.png"] andPalavra:@"Flor"],
-                       [[Letra alloc] initWithLetra:@"G" andImagem:[UIImage imageNamed:@"galinha.png"] andPalavra:@"Galinha"],
-                       [[Letra alloc] initWithLetra:@"H" andImagem:[UIImage imageNamed:@"hipopotamo.png"] andPalavra:@"Hipopótamo"],
-                       [[Letra alloc] initWithLetra:@"I" andImagem:[UIImage imageNamed:@"indio.png"] andPalavra:@"Índio"],
-                       [[Letra alloc] initWithLetra:@"J" andImagem:[UIImage imageNamed:@"jacare.png"] andPalavra:@"Jacaré"],
-                       [[Letra alloc] initWithLetra:@"K" andImagem:[UIImage imageNamed:@"kiwi.png"] andPalavra:@"Kiwi"],
-                       [[Letra alloc] initWithLetra:@"L" andImagem:[UIImage imageNamed:@"lampada.png"] andPalavra:@"Lâmpada"],
-                       [[Letra alloc] initWithLetra:@"M" andImagem:[UIImage imageNamed:@"maca.png"] andPalavra:@"Maça"],
-                       [[Letra alloc] initWithLetra:@"N" andImagem:[UIImage imageNamed:@"ninho.png"] andPalavra:@"Ninho"],
-                       [[Letra alloc] initWithLetra:@"O" andImagem:[UIImage imageNamed:@"oculos.png"] andPalavra:@"Óculos"],
-                       [[Letra alloc] initWithLetra:@"P" andImagem:[UIImage imageNamed:@"palhaco.png"] andPalavra:@"Palhaço"],
-                       [[Letra alloc] initWithLetra:@"Q" andImagem:[UIImage imageNamed:@"queijo.png"] andPalavra:@"Queijo"],
-                       [[Letra alloc] initWithLetra:@"R" andImagem:[UIImage imageNamed:@"relogio.png"] andPalavra:@"Relógio"],
-                       [[Letra alloc] initWithLetra:@"S" andImagem:[UIImage imageNamed:@"sapo.png"] andPalavra:@"Sapo"],
-                       [[Letra alloc] initWithLetra:@"T" andImagem:[UIImage imageNamed:@"tartaruga.png"] andPalavra:@"Tartaruga"],
-                       [[Letra alloc] initWithLetra:@"U" andImagem:[UIImage imageNamed:@"urso.png"] andPalavra:@"Urso"],
-                       [[Letra alloc] initWithLetra:@"V" andImagem:[UIImage imageNamed:@"vaca.png"] andPalavra:@"Vaca"],
-                       [[Letra alloc] initWithLetra:@"W" andImagem:[UIImage imageNamed:@"windsurf.png"] andPalavra:@"Windsurf"],
-                       [[Letra alloc] initWithLetra:@"X" andImagem:[UIImage imageNamed:@"xadrez.png"] andPalavra:@"Xadrez"],
-                       [[Letra alloc] initWithLetra:@"Y" andImagem:[UIImage imageNamed:@"yoga.png"] andPalavra:@"Yoga"],
-                       [[Letra alloc] initWithLetra:@"Z" andImagem:[UIImage imageNamed:@"zebra.png"] andPalavra:@"Zebra"],
+                       [[Letra alloc] initWithLetra:@"A" andImagem:@"arvore" andPalavra:@"Árvore"],
+                       [[Letra alloc] initWithLetra:@"B" andImagem:@"bola" andPalavra:@"Bola"],
+                       [[Letra alloc] initWithLetra:@"C" andImagem:@"casa" andPalavra:@"Casa"],
+                       [[Letra alloc] initWithLetra:@"D" andImagem:@"dado" andPalavra:@"Dado"],
+                       [[Letra alloc] initWithLetra:@"E" andImagem:@"elefante" andPalavra:@"Elefante"],
+                       [[Letra alloc] initWithLetra:@"F" andImagem:@"flor" andPalavra:@"Flor"],
+                       [[Letra alloc] initWithLetra:@"G" andImagem:@"galinha" andPalavra:@"Galinha"],
+                       [[Letra alloc] initWithLetra:@"H" andImagem:@"hipopotamo" andPalavra:@"Hipopótamo"],
+                       [[Letra alloc] initWithLetra:@"I" andImagem:@"indio" andPalavra:@"Índio"],
+                       [[Letra alloc] initWithLetra:@"J" andImagem:@"jacare" andPalavra:@"Jacaré"],
+                       [[Letra alloc] initWithLetra:@"K" andImagem:@"kiwi" andPalavra:@"Kiwi"],
+                       [[Letra alloc] initWithLetra:@"L" andImagem:@"lampada" andPalavra:@"Lâmpada"],
+                       [[Letra alloc] initWithLetra:@"M" andImagem:@"maca" andPalavra:@"Maça"],
+                       [[Letra alloc] initWithLetra:@"N" andImagem:@"ninho" andPalavra:@"Ninho"],
+                       [[Letra alloc] initWithLetra:@"O" andImagem:@"oculos" andPalavra:@"Óculos"],
+                       [[Letra alloc] initWithLetra:@"P" andImagem:@"palhaco" andPalavra:@"Palhaço"],
+                       [[Letra alloc] initWithLetra:@"Q" andImagem:@"queijo" andPalavra:@"Queijo"],
+                       [[Letra alloc] initWithLetra:@"R" andImagem:@"relogio" andPalavra:@"Relógio"],
+                       [[Letra alloc] initWithLetra:@"S" andImagem:@"sapo" andPalavra:@"Sapo"],
+                       [[Letra alloc] initWithLetra:@"T" andImagem:@"tartaruga" andPalavra:@"Tartaruga"],
+                       [[Letra alloc] initWithLetra:@"U" andImagem:@"urso" andPalavra:@"Urso"],
+                       [[Letra alloc] initWithLetra:@"V" andImagem:@"vaca" andPalavra:@"Vaca"],
+                       [[Letra alloc] initWithLetra:@"W" andImagem:@"windsurf" andPalavra:@"Windsurf"],
+                       [[Letra alloc] initWithLetra:@"X" andImagem:@"xadrez" andPalavra:@"Xadrez"],
+                       [[Letra alloc] initWithLetra:@"Y" andImagem:@"yoga" andPalavra:@"Yoga"],
+                       [[Letra alloc] initWithLetra:@"Z" andImagem:@"zebra" andPalavra:@"Zebra"],
                        nil
                        ];
         _indice = 0;
@@ -62,9 +63,15 @@ static bool isFirstAccess = NO;
 }
 
 -(Letra *)proximaLetra {
+    _indice=(_indice+1)%26;
     Letra *proxima = [_abecedario objectAtIndex:_indice];
-    _indice++;
     return proxima;
+}
+
+-(Letra *)letraAnterior {
+    _indice = (_indice+25)%26;
+    Letra *anterior = [_abecedario objectAtIndex:_indice];
+    return anterior;
 }
 
 @end

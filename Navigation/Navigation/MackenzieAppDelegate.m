@@ -7,26 +7,19 @@
 //
 
 #import "MackenzieAppDelegate.h"
-#import "DicionarioViewController.h"
+#import "ImagemGrandeViewController.h"
 
 @implementation MackenzieAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-//    LetraAViewController *viewController = [[LetraAViewController alloc]
-//                                           initWithNibName:nil
-//                                           bundle:nil];
-    DicionarioViewController *viewController = [[DicionarioViewController alloc] initWithNibName:nil bundle:nil];
-    viewController.letra = [[Letra alloc] initWithLetra:@"A" andImagem:[UIImage imageNamed:@"arvore.png"] andPalavra:@"Árvore"];
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    ImagemGrandeViewController *igvc = [[ImagemGrandeViewController alloc] init];
+
+    igvc.letra = [[Letra alloc] initWithLetra:@"A" andImagem:@"arvore" andPalavra:@"Árvore"];
     
-    
-    self.navigationController = [[UINavigationController alloc]
-                                 initWithRootViewController:viewController];
-    self.window = [[UIWindow alloc]
-                   initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.navigationController = [[UINavigationController alloc] initWithRootViewController:igvc];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = self.navigationController;
-
-
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

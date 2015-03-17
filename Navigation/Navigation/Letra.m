@@ -10,7 +10,7 @@
 
 @implementation Letra
 
--(instancetype)initWithLetra:(NSString *)letra andImagem:(UIImage *)imagem andPalavra:(NSString *)palavra {
+-(instancetype)initWithLetra:(NSString *)letra andImagem:(NSString *)imagem andPalavra:(NSString *)palavra {
     self = [super init];
     if (self) {
         _letra = letra;

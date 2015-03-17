@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1711B6181AB7013C006E0B92 /* Alfabeto.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B6171AB7013C006E0B92 /* Alfabeto.m */; };
 		1711B61B1AB701ED006E0B92 /* Letra.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B61A1AB701ED006E0B92 /* Letra.m */; };
-		1711B61E1AB70B6D006E0B92 /* DicionarioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1711B61D1AB70B6D006E0B92 /* DicionarioViewController.m */; };
 		1711B63B1AB722E5006E0B92 /* bola.png in Resources */ = {isa = PBXBuildFile; fileRef = 1711B6221AB722E5006E0B92 /* bola.png */; };
 		1711B63C1AB722E5006E0B92 /* casa.png in Resources */ = {isa = PBXBuildFile; fileRef = 1711B6231AB722E5006E0B92 /* casa.png */; };
 		1711B63D1AB722E5006E0B92 /* dado.png in Resources */ = {isa = PBXBuildFile; fileRef = 1711B6241AB722E5006E0B92 /* dado.png */; };
@@ -36,6 +35,8 @@
 		1711B6521AB722E5006E0B92 /* yoga.png in Resources */ = {isa = PBXBuildFile; fileRef = 1711B6391AB722E5006E0B92 /* yoga.png */; };
 		1711B6531AB722E5006E0B92 /* zebra.png in Resources */ = {isa = PBXBuildFile; fileRef = 1711B63A1AB722E5006E0B92 /* zebra.png */; };
 		1711B6551AB72319006E0B92 /* arvore.png in Resources */ = {isa = PBXBuildFile; fileRef = 1711B6541AB72319006E0B92 /* arvore.png */; };
+		1774A59B1AB8A90C009295D7 /* PalavraGrandeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1774A59A1AB8A90C009295D7 /* PalavraGrandeViewController.m */; };
+		17F07FA11AB87A4200E56C80 /* ImagemGrandeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F07FA01AB87A4200E56C80 /* ImagemGrandeViewController.m */; };
 		27156F4D18B76AF50053A99C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27156F4C18B76AF50053A99C /* Foundation.framework */; };
 		27156F4F18B76AF50053A99C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27156F4E18B76AF50053A99C /* CoreGraphics.framework */; };
 		27156F5118B76AF50053A99C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27156F5018B76AF50053A99C /* UIKit.framework */; };
@@ -65,8 +66,6 @@
 		1711B6171AB7013C006E0B92 /* Alfabeto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alfabeto.m; sourceTree = "<group>"; };
 		1711B6191AB701ED006E0B92 /* Letra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Letra.h; sourceTree = "<group>"; };
 		1711B61A1AB701ED006E0B92 /* Letra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Letra.m; sourceTree = "<group>"; };
-		1711B61C1AB70B6D006E0B92 /* DicionarioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DicionarioViewController.h; sourceTree = "<group>"; };
-		1711B61D1AB70B6D006E0B92 /* DicionarioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DicionarioViewController.m; sourceTree = "<group>"; };
 		1711B6221AB722E5006E0B92 /* bola.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bola.png; sourceTree = "<group>"; };
 		1711B6231AB722E5006E0B92 /* casa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = casa.png; sourceTree = "<group>"; };
 		1711B6241AB722E5006E0B92 /* dado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dado.png; sourceTree = "<group>"; };
@@ -93,6 +92,10 @@
 		1711B6391AB722E5006E0B92 /* yoga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yoga.png; sourceTree = "<group>"; };
 		1711B63A1AB722E5006E0B92 /* zebra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zebra.png; sourceTree = "<group>"; };
 		1711B6541AB72319006E0B92 /* arvore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arvore.png; sourceTree = "<group>"; };
+		1774A5991AB8A90C009295D7 /* PalavraGrandeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PalavraGrandeViewController.h; sourceTree = "<group>"; };
+		1774A59A1AB8A90C009295D7 /* PalavraGrandeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PalavraGrandeViewController.m; sourceTree = "<group>"; };
+		17F07F9F1AB87A4200E56C80 /* ImagemGrandeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagemGrandeViewController.h; sourceTree = "<group>"; };
+		17F07FA01AB87A4200E56C80 /* ImagemGrandeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagemGrandeViewController.m; sourceTree = "<group>"; };
 		27156F4918B76AF50053A99C /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27156F4C18B76AF50053A99C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27156F4E18B76AF50053A99C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -201,14 +204,16 @@
 		27156F5218B76AF50053A99C /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				1711B6161AB7013C006E0B92 /* Alfabeto.h */,
-				1711B6171AB7013C006E0B92 /* Alfabeto.m */,
-				1711B61C1AB70B6D006E0B92 /* DicionarioViewController.h */,
-				1711B61D1AB70B6D006E0B92 /* DicionarioViewController.m */,
-				1711B6191AB701ED006E0B92 /* Letra.h */,
-				1711B61A1AB701ED006E0B92 /* Letra.m */,
 				27156F5B18B76AF50053A99C /* MackenzieAppDelegate.h */,
 				27156F5C18B76AF50053A99C /* MackenzieAppDelegate.m */,
+				1711B6161AB7013C006E0B92 /* Alfabeto.h */,
+				1711B6171AB7013C006E0B92 /* Alfabeto.m */,
+				1711B6191AB701ED006E0B92 /* Letra.h */,
+				1711B61A1AB701ED006E0B92 /* Letra.m */,
+				17F07F9F1AB87A4200E56C80 /* ImagemGrandeViewController.h */,
+				17F07FA01AB87A4200E56C80 /* ImagemGrandeViewController.m */,
+				1774A5991AB8A90C009295D7 /* PalavraGrandeViewController.h */,
+				1774A59A1AB8A90C009295D7 /* PalavraGrandeViewController.m */,
 				27156F5E18B76AF50053A99C /* Images.xcassets */,
 				1711B61F1AB71621006E0B92 /* imagens */,
 				27156F5318B76AF50053A99C /* Supporting Files */,
@@ -367,11 +372,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1711B61E1AB70B6D006E0B92 /* DicionarioViewController.m in Sources */,
 				1711B61B1AB701ED006E0B92 /* Letra.m in Sources */,
 				27156F5D18B76AF50053A99C /* MackenzieAppDelegate.m in Sources */,
 				1711B6181AB7013C006E0B92 /* Alfabeto.m in Sources */,
+				1774A59B1AB8A90C009295D7 /* PalavraGrandeViewController.m in Sources */,
 				27156F5918B76AF50053A99C /* main.m in Sources */,
+				17F07FA11AB87A4200E56C80 /* ImagemGrandeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

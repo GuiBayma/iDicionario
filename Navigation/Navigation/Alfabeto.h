@@ -15,5 +15,6 @@
 @property NSInteger indice;
 +(instancetype)sharedInstance;
 -(Letra *) proximaLetra;
+-(Letra *) letraAnterior;
 
 @end
