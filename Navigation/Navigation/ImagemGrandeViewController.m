@@ -13,6 +13,8 @@
     UIImageView *imageView;
     UITextField *textfield;
     UILabel *palavra;
+    BOOL moveu;
+    CGPoint coordenadaInicialImagem;
 }
 
 - (void)viewDidLoad {
@@ -43,6 +45,8 @@
     textfield.delegate = self;
     alfabeto = [Alfabeto sharedInstance];
     [self.view addSubview:toolBar];
+    
+    moveu = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,17 +61,19 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:_letra.imagemLetra ofType:@"png"];
     imageView.image = [UIImage imageWithContentsOfFile:path];
     [imageView setCenter:self.view.center];
+    imageView.userInteractionEnabled = YES;
     
-    [UIView animateWithDuration:1.0
+    [UIView animateWithDuration:0.8
                           delay:0.2
                         options:UIViewAnimationOptionCurveEaseIn
                      animations:^(void) {
-                         imageView.frame = CGRectMake(0, 0, 300, 300);
+                         imageView.frame = CGRectMake(0, 0, 150, 150);
                          [imageView setCenter:self.view.center];
                      }completion:nil];
     
     palavra = [[UILabel alloc] init];
     palavra.text = _letra.palavraLetra;
+    palavra.font = [UIFont systemFontOfSize:25];
     [palavra sizeToFit];
     [palavra setCenter:CGPointMake(imageView.center.x, imageView.center.y+180)];
     
@@ -102,6 +108,7 @@
 
 -(void) mudarNome {
     palavra.text = textfield.text;
+    textfield.text = @"";
     [palavra sizeToFit];
     [palavra setCenter:CGPointMake(imageView.center.x, imageView.center.y+180)];
     [textfield resignFirstResponder];
@@ -109,6 +116,61 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [textfield resignFirstResponder];
+    UITouch *toque = [touches anyObject];
+    coordenadaInicialImagem = imageView.center;
+    if ([toque view] == imageView) {
+        [UIView animateWithDuration:0.2
+                              delay:0
+                            options:UIViewAnimationOptionCurveLinear
+                         animations:^(void) {
+                             imageView.frame = CGRectMake(0, 0, 300, 300);
+                             [imageView setCenter:self.view.center];
+                         }completion:nil];
+        [self.view setBackgroundColor:[UIColor grayColor]];
+    }
+}
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    moveu = YES;
+    UITouch *toque = [touches anyObject];
+    if ([toque view] == imageView) {
+        CGPoint coordenadaToque = [toque locationInView:self.view];
+        [UIView animateWithDuration:0
+                              delay:0
+                            options:UIViewAnimationOptionCurveLinear
+                         animations:^(void) {
+                             imageView.frame = CGRectMake(0, 0, 150, 150);
+                             [imageView setCenter:coordenadaToque];
+                         }completion:nil];
+        [self.view setBackgroundColor:[UIColor whiteColor]];
+    }
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch *toque = [touches anyObject];
+    if ([toque view] == imageView) {
+        if (moveu) {
+            CGPoint coordenadaToque = [toque locationInView:self.view];
+            [UIView animateWithDuration:0.2
+                                  delay:0
+                                options:UIViewAnimationOptionCurveLinear
+                             animations:^(void) {
+                                 imageView.frame = CGRectMake(0, 0, 150, 150);
+                                 [imageView setCenter:coordenadaToque];
+                             }completion:nil];
+        }
+        else {
+            [UIView animateWithDuration:0.2
+                                  delay:0
+                                options:UIViewAnimationOptionCurveLinear
+                             animations:^(void) {
+                                 imageView.frame = CGRectMake(0, 0, 150, 150);
+                                 [imageView setCenter:coordenadaInicialImagem];
+                             }completion:nil];
+        }
+        [self.view setBackgroundColor:[UIColor whiteColor]];
+        moveu = NO;
+    }
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {
