@@ -10,7 +10,7 @@
 #import "Alfabeto.h"
 #import "Letra.h"
 
-@interface ImagemGrandeViewController : UIViewController
+@interface ImagemGrandeViewController : UIViewController <UITextFieldDelegate>
 
 @property Letra *letra;
 

@@ -16,7 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     alfabeto = [Alfabeto sharedInstance];
-    self.tableView.contentInset = UIEdgeInsetsMake(20.0, 0, 50.0, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(20.0, 0, 48.0, 0);
 }
 
 - (void)didReceiveMemoryWarning {
