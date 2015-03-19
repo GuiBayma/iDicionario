@@ -35,14 +35,12 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"celulaPadrao"];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"celulaPadrao"];
     Letra *letra = [alfabeto.abecedario objectAtIndex:indexPath.row];
     
     cell.textLabel.text = letra.letra;
     cell.detailTextLabel.text = letra.palavraLetra;
-    NSString *path = [[NSBundle mainBundle] pathForResource:letra.imagemLetra ofType:@"png"];
-    [cell.imageView setImage:[UIImage imageWithContentsOfFile:path]];
-    [cell.imageView setFrame:CGRectMake(0, 0, 90, 90)];
+    [cell.imageView setImage:[UIImage imageWithContentsOfFile:letra.imagemLetra]];
     return cell;
 }
 

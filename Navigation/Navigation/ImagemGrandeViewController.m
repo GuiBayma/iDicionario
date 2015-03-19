@@ -160,7 +160,7 @@
     UITouch *toque = [touches anyObject];
     if ([toque view] == imageView) {
         CGPoint coordenadaToque = [toque locationInView:self.view];
-        [UIView animateWithDuration:0
+        [UIView animateWithDuration:0.1
                               delay:0
                             options:UIViewAnimationOptionCurveLinear
                          animations:^(void) {
