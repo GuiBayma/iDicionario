@@ -35,12 +35,16 @@
 		1711B6521AB722E5006E0B92 /* yoga.png in Resources */ = {isa = PBXBuildFile; fileRef = 1711B6391AB722E5006E0B92 /* yoga.png */; };
 		1711B6531AB722E5006E0B92 /* zebra.png in Resources */ = {isa = PBXBuildFile; fileRef = 1711B63A1AB722E5006E0B92 /* zebra.png */; };
 		1711B6551AB72319006E0B92 /* arvore.png in Resources */ = {isa = PBXBuildFile; fileRef = 1711B6541AB72319006E0B92 /* arvore.png */; };
+		1722153C1ABB38730027FC5F /* BuscaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1722153B1ABB38730027FC5F /* BuscaViewController.m */; };
+		172215421ABB39DE0027FC5F /* search-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 172215411ABB39DE0027FC5F /* search-26.png */; };
+		175F3B911ABB45850003A46C /* notebook-104.png in Resources */ = {isa = PBXBuildFile; fileRef = 175F3B901ABB45850003A46C /* notebook-104.png */; };
 		1774A59E1AB8AA83009295D7 /* DicionarioTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1774A59D1AB8AA83009295D7 /* DicionarioTableViewController.m */; };
 		177763E41AB8C2810045EE91 /* book-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 177763E31AB8C2810045EE91 /* book-26.png */; };
 		177763E61AB8C3520045EE91 /* turtle-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 177763E51AB8C3520045EE91 /* turtle-26.png */; };
 		17F07FA11AB87A4200E56C80 /* ImagemGrandeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F07FA01AB87A4200E56C80 /* ImagemGrandeViewController.m */; };
 		17F68FC11ABA0063003D776E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F68FC01ABA0063003D776E /* Realm.framework */; };
 		17F68FC31ABA0084003D776E /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 17F68FC21ABA0084003D776E /* libc++.dylib */; };
+		17FEAE811ABB6056002285AB /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FEAE801ABB6056002285AB /* DetailViewController.m */; };
 		27156F4D18B76AF50053A99C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27156F4C18B76AF50053A99C /* Foundation.framework */; };
 		27156F4F18B76AF50053A99C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27156F4E18B76AF50053A99C /* CoreGraphics.framework */; };
 		27156F5118B76AF50053A99C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27156F5018B76AF50053A99C /* UIKit.framework */; };
@@ -96,6 +100,10 @@
 		1711B6391AB722E5006E0B92 /* yoga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yoga.png; sourceTree = "<group>"; };
 		1711B63A1AB722E5006E0B92 /* zebra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zebra.png; sourceTree = "<group>"; };
 		1711B6541AB72319006E0B92 /* arvore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arvore.png; sourceTree = "<group>"; };
+		1722153A1ABB38730027FC5F /* BuscaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuscaViewController.h; sourceTree = "<group>"; };
+		1722153B1ABB38730027FC5F /* BuscaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuscaViewController.m; sourceTree = "<group>"; };
+		172215411ABB39DE0027FC5F /* search-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-26.png"; sourceTree = "<group>"; };
+		175F3B901ABB45850003A46C /* notebook-104.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "notebook-104.png"; sourceTree = "<group>"; };
 		1774A59C1AB8AA83009295D7 /* DicionarioTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DicionarioTableViewController.h; sourceTree = "<group>"; };
 		1774A59D1AB8AA83009295D7 /* DicionarioTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DicionarioTableViewController.m; sourceTree = "<group>"; };
 		177763E31AB8C2810045EE91 /* book-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "book-26.png"; sourceTree = "<group>"; };
@@ -104,6 +112,8 @@
 		17F07FA01AB87A4200E56C80 /* ImagemGrandeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagemGrandeViewController.m; sourceTree = "<group>"; };
 		17F68FC01ABA0063003D776E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../../../Downloads/realm-cocoa-0.91.1/ios/Realm.framework"; sourceTree = "<group>"; };
 		17F68FC21ABA0084003D776E /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		17FEAE7F1ABB6056002285AB /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		17FEAE801ABB6056002285AB /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		27156F4918B76AF50053A99C /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27156F4C18B76AF50053A99C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27156F4E18B76AF50053A99C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -151,6 +161,8 @@
 		1711B61F1AB71621006E0B92 /* imagens */ = {
 			isa = PBXGroup;
 			children = (
+				175F3B901ABB45850003A46C /* notebook-104.png */,
+				172215411ABB39DE0027FC5F /* search-26.png */,
 				177763E51AB8C3520045EE91 /* turtle-26.png */,
 				177763E31AB8C2810045EE91 /* book-26.png */,
 				1711B6541AB72319006E0B92 /* arvore.png */,
@@ -222,6 +234,10 @@
 				27156F5C18B76AF50053A99C /* MackenzieAppDelegate.m */,
 				1711B6161AB7013C006E0B92 /* Alfabeto.h */,
 				1711B6171AB7013C006E0B92 /* Alfabeto.m */,
+				1722153A1ABB38730027FC5F /* BuscaViewController.h */,
+				1722153B1ABB38730027FC5F /* BuscaViewController.m */,
+				17FEAE7F1ABB6056002285AB /* DetailViewController.h */,
+				17FEAE801ABB6056002285AB /* DetailViewController.m */,
 				1711B6191AB701ED006E0B92 /* Letra.h */,
 				1711B61A1AB701ED006E0B92 /* Letra.m */,
 				17F07F9F1AB87A4200E56C80 /* ImagemGrandeViewController.h */,
@@ -346,6 +362,7 @@
 				1711B63D1AB722E5006E0B92 /* dado.png in Resources */,
 				1711B6511AB722E5006E0B92 /* xadrez.png in Resources */,
 				1711B6471AB722E5006E0B92 /* ninho.png in Resources */,
+				175F3B911ABB45850003A46C /* notebook-104.png in Resources */,
 				1711B6401AB722E5006E0B92 /* galinha.png in Resources */,
 				1711B64C1AB722E5006E0B92 /* sapo.png in Resources */,
 				1711B6551AB72319006E0B92 /* arvore.png in Resources */,
@@ -369,6 +386,7 @@
 				1711B64F1AB722E5006E0B92 /* vaca.png in Resources */,
 				1711B64E1AB722E5006E0B92 /* urso.png in Resources */,
 				1711B6531AB722E5006E0B92 /* zebra.png in Resources */,
+				172215421ABB39DE0027FC5F /* search-26.png in Resources */,
 				1711B6441AB722E5006E0B92 /* kiwi.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,8 +409,10 @@
 				1774A59E1AB8AA83009295D7 /* DicionarioTableViewController.m in Sources */,
 				1711B61B1AB701ED006E0B92 /* Letra.m in Sources */,
 				27156F5D18B76AF50053A99C /* MackenzieAppDelegate.m in Sources */,
+				17FEAE811ABB6056002285AB /* DetailViewController.m in Sources */,
 				1711B6181AB7013C006E0B92 /* Alfabeto.m in Sources */,
 				27156F5918B76AF50053A99C /* main.m in Sources */,
+				1722153C1ABB38730027FC5F /* BuscaViewController.m in Sources */,
 				17F07FA11AB87A4200E56C80 /* ImagemGrandeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

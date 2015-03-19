@@ -9,6 +9,7 @@
 #import "MackenzieAppDelegate.h"
 #import "ImagemGrandeViewController.h"
 #import "DicionarioTableViewController.h"
+#import "BuscaViewController.h"
 #import "Alfabeto.h"
 
 @implementation MackenzieAppDelegate
@@ -16,6 +17,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     Alfabeto *a = [Alfabeto sharedInstance];
+    
+    BuscaViewController *bvc = [[BuscaViewController alloc] init];
+    UINavigationController *buscaNav = [[UINavigationController alloc] initWithRootViewController:bvc];
 
     ImagemGrandeViewController *igvc = [[ImagemGrandeViewController alloc] init];
     igvc.letra = [a.abecedario firstObject];
@@ -26,8 +30,10 @@
     
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:igvc];
     
-    self.tabBarController.viewControllers = @[self.navigationController,dtvc];
+    self.tabBarController.viewControllers = @[buscaNav,self.navigationController,dtvc];
     
+    bvc.navigationController.tabBarItem.title = @"Busca";
+    bvc.navigationController.tabBarItem.image = [UIImage imageNamed:@"search-26.png"];
     igvc.navigationController.tabBarItem.title = @"Navegaçāo";
     igvc.navigationController.tabBarItem.image = [UIImage imageNamed:@"turtle-26.png"];
     dtvc.tabBarItem.title = @"Dicionário";

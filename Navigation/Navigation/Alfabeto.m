@@ -106,4 +106,13 @@ static bool isFirstAccess = NO;
     [_abecedario replaceObjectAtIndex:_indice withObject:letra];
 }
 
+-(Letra *) buscaPalavra:(NSString *)palavra {
+    for (Letra *l in _abecedario) {
+        if ([l.palavraLetra isEqualToString:palavra]) {
+            return l;
+        }
+    }
+    return nil;
+}
+
 @end

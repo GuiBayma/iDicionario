@@ -17,5 +17,6 @@
 -(Letra *) proximaLetra;
 -(Letra *) letraAnterior;
 -(void) alterarLetra: (Letra *)letra;
+-(Letra *) buscaPalavra:(NSString *)palavra;
 
 @end

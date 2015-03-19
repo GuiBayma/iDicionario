@@ -7,7 +7,6 @@
 //
 
 #import "ImagemGrandeViewController.h"
-#import <Realm/Realm.h>
 
 @implementation ImagemGrandeViewController {
     Alfabeto *alfabeto;
@@ -56,7 +55,6 @@
     self.navigationItem.title = _letra.letra;
     
     imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
-    //NSString *path = [[NSBundle mainBundle] pathForResource:_letra.imagemLetra ofType:@"png"];
     imageView.image = [UIImage imageWithContentsOfFile:_letra.imagemLetra];
     [imageView setCenter:self.view.center];
     imageView.userInteractionEnabled = YES;
