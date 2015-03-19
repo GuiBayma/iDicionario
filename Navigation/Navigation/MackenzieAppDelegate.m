@@ -9,13 +9,16 @@
 #import "MackenzieAppDelegate.h"
 #import "ImagemGrandeViewController.h"
 #import "DicionarioTableViewController.h"
+#import "Alfabeto.h"
 
 @implementation MackenzieAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    Alfabeto *a = [Alfabeto sharedInstance];
 
     ImagemGrandeViewController *igvc = [[ImagemGrandeViewController alloc] init];
-    igvc.letra = [[Letra alloc] initWithLetra:@"A" andImagem:@"arvore" andPalavra:@"Árvore"];
+    igvc.letra = [a.abecedario firstObject];
     
     DicionarioTableViewController *dtvc = [[DicionarioTableViewController alloc] init];
     

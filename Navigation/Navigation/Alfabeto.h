@@ -11,10 +11,11 @@
 
 @interface Alfabeto : NSObject
 
-@property NSArray *abecedario;
+@property NSMutableArray *abecedario;
 @property NSInteger indice;
 +(instancetype)sharedInstance;
 -(Letra *) proximaLetra;
 -(Letra *) letraAnterior;
+-(void) alterarLetra: (Letra *)letra;
 
 @end

@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <Realm/Realm.h>
 
-@interface Letra : NSObject
+@interface Letra : RLMObject
 
 @property NSString *letra;
 @property NSString *imagemLetra;

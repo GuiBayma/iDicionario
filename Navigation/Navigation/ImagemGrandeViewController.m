@@ -7,6 +7,7 @@
 //
 
 #import "ImagemGrandeViewController.h"
+#import <Realm/Realm.h>
 
 @implementation ImagemGrandeViewController {
     Alfabeto *alfabeto;
@@ -20,21 +21,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 60, self.view.bounds.size.width, 44)];
+    UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 65, self.view.bounds.size.width, 44)];
     [toolBar setBackgroundColor:[UIColor blackColor]];
-    textfield.delegate = self;
-    textfield = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width*0.70, 27)];
+    textfield = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width*0.77, 27)];
     textfield.borderStyle = UITextBorderStyleRoundedRect;
     textfield.placeholder = @"Mude a palavra!";
     textfield.autocorrectionType = UITextAutocorrectionTypeNo;
     textfield.keyboardType = UIKeyboardTypeDefault;
     textfield.returnKeyType = UIReturnKeyDone;
     textfield.clearButtonMode = UITextFieldViewModeWhileEditing;
-    textfield.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
 
     UIBarButtonItem *textBar = [[UIBarButtonItem alloc] initWithCustomView:textfield];
-    UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(mudarNome)];
-    [toolBar setItems:@[textBar, bbi]];
+    UIBarButtonItem *mudarFoto = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(alterarFoto)];
+    [toolBar setItems:@[textBar, mudarFoto]];
     
     UIBarButtonItem *next = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFastForward target:self action:@selector(next:)];
     self.navigationItem.rightBarButtonItem=next;
@@ -54,12 +53,11 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated {
-    self.navigationController.tabBarItem.title = @"Navegaçāo";
     self.navigationItem.title = _letra.letra;
     
     imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
-    NSString *path = [[NSBundle mainBundle] pathForResource:_letra.imagemLetra ofType:@"png"];
-    imageView.image = [UIImage imageWithContentsOfFile:path];
+    //NSString *path = [[NSBundle mainBundle] pathForResource:_letra.imagemLetra ofType:@"png"];
+    imageView.image = [UIImage imageWithContentsOfFile:_letra.imagemLetra];
     [imageView setCenter:self.view.center];
     imageView.userInteractionEnabled = YES;
     
@@ -107,11 +105,38 @@
 }
 
 -(void) mudarNome {
-    palavra.text = textfield.text;
-    textfield.text = @"";
-    [palavra sizeToFit];
-    [palavra setCenter:CGPointMake(imageView.center.x, imageView.center.y+180)];
+    if (![textfield.text  isEqual: @""]) {
+        palavra.text = textfield.text;
+        _letra.palavraLetra = textfield.text;
+        [alfabeto alterarLetra:_letra];
+        textfield.text = @"";
+        [palavra sizeToFit];
+        [palavra setCenter:CGPointMake(imageView.center.x, imageView.center.y+180)];
+    }
     [textfield resignFirstResponder];
+}
+
+- (void) alterarFoto {
+    UIImagePickerController *ipc = [[UIImagePickerController alloc] init];
+    [ipc setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+    ipc.delegate = self;
+    [self presentViewController:ipc animated:YES completion:nil];
+}
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *imagemSelecionada = [info valueForKey:UIImagePickerControllerOriginalImage];
+    
+    NSString *fileName = [NSString stringWithFormat:@"%ld.jpg", (long)alfabeto.indice];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *filePath = [[paths firstObject] stringByAppendingPathComponent:fileName];
+    
+    //[UIImagePNGRepresentation(imagemSelecionada) writeToFile:filePath atomically:YES];
+    [UIImageJPEGRepresentation((imagemSelecionada), 10.0) writeToFile:filePath atomically:YES];
+    
+    _letra.imagemLetra = filePath;
+    [alfabeto alterarLetra:_letra];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
