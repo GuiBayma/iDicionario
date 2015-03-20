@@ -138,36 +138,8 @@
 }
 
 - (void)pinch:(UIPinchGestureRecognizer *)gesture {
-//    double previousScale = 1.0;
-//    CGPoint lastPoint = [gesture locationInView:[gesture view]];
-//    if([gesture state] == UIGestureRecognizerStateBegan) {
-//        previousScale = 1.0;
-//        lastPoint = [gesture locationInView:[gesture view]];
-//    }
-//    
-//    if (
-//        [gesture state] == UIGestureRecognizerStateChanged) {
-//        
-//        CGFloat currentScale = [[[gesture view].layer valueForKeyPath:@"transform.scale"] floatValue];
-//        
-//        // Constants to adjust the max/min values of zoom
-//        const CGFloat kMaxScale = 4.0;
-//        const CGFloat kMinScale = 1.0;
-//        
-//        CGFloat newScale = 1 -  (previousScale - [gesture scale]); // new scale is in the range (0-1)
-//        newScale = MIN(newScale, kMaxScale / currentScale);
-//        newScale = MAX(newScale, kMinScale / currentScale);
-//        CGFloat scale = newScale;
-//        
-//        CGAffineTransform transform = CGAffineTransformScale([[gesture view] transform], newScale, newScale);
-//        
-//        imageView.transform = transform;
-//        
-//        CGPoint point = [gesture locationInView:[gesture view]];
-//        CGAffineTransform transformTranslate = CGAffineTransformTranslate([[gesture view] transform], point.x-lastPoint.x, point.y-lastPoint.y);
-//        
-//        imageView.transform = transformTranslate;
-//    }
+    gesture.view.transform = CGAffineTransformScale(gesture.view.transform, gesture.scale, gesture.scale);
+    gesture.scale = 1;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -182,7 +154,7 @@
                               delay:0
                             options:UIViewAnimationOptionCurveLinear
                          animations:^(void) {
-                             imageView.frame = CGRectMake(0, 0, 150, 150);
+                             //imageView.frame = CGRectMake(0, 0, 150, 150);
                              [imageView setCenter:coordenadaToque];
                          }completion:nil];
         [self.view setBackgroundColor:[UIColor whiteColor]];
@@ -197,7 +169,7 @@
                               delay:0
                             options:UIViewAnimationOptionCurveLinear
                          animations:^(void) {
-                             imageView.frame = CGRectMake(0, 0, 150, 150);
+                             //imageView.frame = CGRectMake(0, 0, 150, 150);
                              [imageView setCenter:coordenadaToque];
                          }completion:nil];
     }
