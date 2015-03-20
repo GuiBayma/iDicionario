@@ -13,7 +13,6 @@
     UIImageView *imageView;
     UITextField *textfield;
     UILabel *palavra;
-    BOOL moveu;
     CGPoint coordenadaInicialImagem;
 }
 
@@ -43,8 +42,6 @@
     textfield.delegate = self;
     alfabeto = [Alfabeto sharedInstance];
     [self.view addSubview:toolBar];
-    
-    moveu = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,6 +55,9 @@
     imageView.image = [UIImage imageWithContentsOfFile:_letra.imagemLetra];
     [imageView setCenter:self.view.center];
     imageView.userInteractionEnabled = YES;
+    UIPinchGestureRecognizer *pgr = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
+    pgr.delegate = self;
+    [imageView addGestureRecognizer:pgr];
     
     [UIView animateWithDuration:0.8
                           delay:0.2
@@ -137,24 +137,44 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (void)pinch:(UIPinchGestureRecognizer *)gesture {
+//    double previousScale = 1.0;
+//    CGPoint lastPoint = [gesture locationInView:[gesture view]];
+//    if([gesture state] == UIGestureRecognizerStateBegan) {
+//        previousScale = 1.0;
+//        lastPoint = [gesture locationInView:[gesture view]];
+//    }
+//    
+//    if (
+//        [gesture state] == UIGestureRecognizerStateChanged) {
+//        
+//        CGFloat currentScale = [[[gesture view].layer valueForKeyPath:@"transform.scale"] floatValue];
+//        
+//        // Constants to adjust the max/min values of zoom
+//        const CGFloat kMaxScale = 4.0;
+//        const CGFloat kMinScale = 1.0;
+//        
+//        CGFloat newScale = 1 -  (previousScale - [gesture scale]); // new scale is in the range (0-1)
+//        newScale = MIN(newScale, kMaxScale / currentScale);
+//        newScale = MAX(newScale, kMinScale / currentScale);
+//        CGFloat scale = newScale;
+//        
+//        CGAffineTransform transform = CGAffineTransformScale([[gesture view] transform], newScale, newScale);
+//        
+//        imageView.transform = transform;
+//        
+//        CGPoint point = [gesture locationInView:[gesture view]];
+//        CGAffineTransform transformTranslate = CGAffineTransformTranslate([[gesture view] transform], point.x-lastPoint.x, point.y-lastPoint.y);
+//        
+//        imageView.transform = transformTranslate;
+//    }
+}
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [textfield resignFirstResponder];
-    UITouch *toque = [touches anyObject];
-    coordenadaInicialImagem = imageView.center;
-    if ([toque view] == imageView) {
-        [UIView animateWithDuration:0.2
-                              delay:0
-                            options:UIViewAnimationOptionCurveLinear
-                         animations:^(void) {
-                             imageView.frame = CGRectMake(0, 0, 300, 300);
-                             [imageView setCenter:self.view.center];
-                         }completion:nil];
-        [self.view setBackgroundColor:[UIColor grayColor]];
-    }
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    moveu = YES;
     UITouch *toque = [touches anyObject];
     if ([toque view] == imageView) {
         CGPoint coordenadaToque = [toque locationInView:self.view];
@@ -172,27 +192,14 @@
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     UITouch *toque = [touches anyObject];
     if ([toque view] == imageView) {
-        if (moveu) {
-            CGPoint coordenadaToque = [toque locationInView:self.view];
-            [UIView animateWithDuration:0.2
-                                  delay:0
-                                options:UIViewAnimationOptionCurveLinear
-                             animations:^(void) {
-                                 imageView.frame = CGRectMake(0, 0, 150, 150);
-                                 [imageView setCenter:coordenadaToque];
-                             }completion:nil];
-        }
-        else {
-            [UIView animateWithDuration:0.2
-                                  delay:0
-                                options:UIViewAnimationOptionCurveLinear
-                             animations:^(void) {
-                                 imageView.frame = CGRectMake(0, 0, 150, 150);
-                                 [imageView setCenter:coordenadaInicialImagem];
-                             }completion:nil];
-        }
-        [self.view setBackgroundColor:[UIColor whiteColor]];
-        moveu = NO;
+        CGPoint coordenadaToque = [toque locationInView:self.view];
+        [UIView animateWithDuration:0.2
+                              delay:0
+                            options:UIViewAnimationOptionCurveLinear
+                         animations:^(void) {
+                             imageView.frame = CGRectMake(0, 0, 150, 150);
+                             [imageView setCenter:coordenadaToque];
+                         }completion:nil];
     }
 }
 
