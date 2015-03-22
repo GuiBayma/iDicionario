@@ -16,22 +16,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    //Inicia/recupera a instancia de Alfabeto
     Alfabeto *a = [Alfabeto sharedInstance];
     
+    //Cria a ViewController para buscar uma palavra do dicionario, com Navigation
     BuscaViewController *bvc = [[BuscaViewController alloc] init];
     UINavigationController *buscaNav = [[UINavigationController alloc] initWithRootViewController:bvc];
 
+    //Cria a ViewController que exibe as palavras do dicionario, com Navigation
     ImagemGrandeViewController *igvc = [[ImagemGrandeViewController alloc] init];
     igvc.letra = [a.abecedario firstObject];
-    
-    DicionarioTableViewController *dtvc = [[DicionarioTableViewController alloc] init];
-    
-    self.tabBarController = [[UITabBarController alloc] init];
-    
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:igvc];
     
+    //Cria a TableView que exibe todas as letras do dicionario
+    DicionarioTableViewController *dtvc = [[DicionarioTableViewController alloc] init];
+    
+    //Cria a TabBarController
+    self.tabBarController = [[UITabBarController alloc] init];
+    
+    //Coloca as ViewsControllers dentro da TabBar, na ordem em que devem aparecer
     self.tabBarController.viewControllers = @[buscaNav,self.navigationController,dtvc];
     
+    //Coloca o nome e imagem dos icones das views na TabBar
     bvc.navigationController.tabBarItem.title = @"Busca";
     bvc.navigationController.tabBarItem.image = [UIImage imageNamed:@"search-26.png"];
     igvc.navigationController.tabBarItem.title = @"Navegaçāo";
@@ -39,6 +45,7 @@
     dtvc.tabBarItem.title = @"Dicionário";
     dtvc.tabBarItem.image = [UIImage imageNamed:@"book-26.png"];
     
+    //Cria a window e coloca a TabBar como root
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = self.tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];

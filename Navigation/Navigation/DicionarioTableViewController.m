@@ -13,6 +13,10 @@
     Alfabeto *alfabeto;
 }
 
+/*
+ * Esta view exibe uma tabela com todas as letras armazenadas e suas respectivas palavras e imagens
+ */
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     alfabeto = [Alfabeto sharedInstance];

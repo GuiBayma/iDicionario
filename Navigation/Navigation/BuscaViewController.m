@@ -17,6 +17,12 @@
     UILabel *menssagem;
 }
 
+/*
+ * Esta view exibe uma imagem e uma caia de texto para procurar alguma palavra contida no vetor da classe
+ * Alfabeto. Caso a palavra esteja no vetor, é criada uma view para exibi-la. Caso contrário inicia-se uma
+ * animaçao e é exibida uma label informando que a palavra nao foi encontrada.
+ */
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     alfabeto = [Alfabeto sharedInstance];

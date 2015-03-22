@@ -8,11 +8,11 @@
 
 #import "DetailViewController.h"
 
-@interface DetailViewController ()
-
-@end
-
 @implementation DetailViewController
+
+/*
+ * Esta view exibe a palavra pesquisada, com sua imagem e letra
+ */
 
 - (void)viewDidLoad {
     [super viewDidLoad];

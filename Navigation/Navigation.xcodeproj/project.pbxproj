@@ -195,6 +195,17 @@
 			name = imagens;
 			sourceTree = "<group>";
 		};
+		17317DE31ABF13B1004B9D72 /* Entidades */ = {
+			isa = PBXGroup;
+			children = (
+				1711B6161AB7013C006E0B92 /* Alfabeto.h */,
+				1711B6171AB7013C006E0B92 /* Alfabeto.m */,
+				1711B6191AB701ED006E0B92 /* Letra.h */,
+				1711B61A1AB701ED006E0B92 /* Letra.m */,
+			);
+			name = Entidades;
+			sourceTree = "<group>";
+		};
 		27156F4018B76AF50053A99C = {
 			isa = PBXGroup;
 			children = (
@@ -232,19 +243,16 @@
 			children = (
 				27156F5B18B76AF50053A99C /* MackenzieAppDelegate.h */,
 				27156F5C18B76AF50053A99C /* MackenzieAppDelegate.m */,
-				1711B6161AB7013C006E0B92 /* Alfabeto.h */,
-				1711B6171AB7013C006E0B92 /* Alfabeto.m */,
 				1722153A1ABB38730027FC5F /* BuscaViewController.h */,
 				1722153B1ABB38730027FC5F /* BuscaViewController.m */,
 				17FEAE7F1ABB6056002285AB /* DetailViewController.h */,
 				17FEAE801ABB6056002285AB /* DetailViewController.m */,
-				1711B6191AB701ED006E0B92 /* Letra.h */,
-				1711B61A1AB701ED006E0B92 /* Letra.m */,
 				17F07F9F1AB87A4200E56C80 /* ImagemGrandeViewController.h */,
 				17F07FA01AB87A4200E56C80 /* ImagemGrandeViewController.m */,
 				1774A59C1AB8AA83009295D7 /* DicionarioTableViewController.h */,
 				1774A59D1AB8AA83009295D7 /* DicionarioTableViewController.m */,
 				27156F5E18B76AF50053A99C /* Images.xcassets */,
+				17317DE31ABF13B1004B9D72 /* Entidades */,
 				1711B61F1AB71621006E0B92 /* imagens */,
 				27156F5318B76AF50053A99C /* Supporting Files */,
 			);

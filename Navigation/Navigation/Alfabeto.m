@@ -28,6 +28,7 @@ static bool isFirstAccess = NO;
     self = [super init];
     if (self) {
         
+        //Para nao salvar as imagens (UIImage), ao inves disso é salvo o caminho (path) até elas
         NSString *path = [[NSBundle mainBundle] pathForResource:@"arvore" ofType:@"png"];
         NSString *path1 = [[NSBundle mainBundle] pathForResource:@"bola" ofType:@"png"];
         NSString *path2 = [[NSBundle mainBundle] pathForResource:@"casa" ofType:@"png"];
@@ -55,6 +56,7 @@ static bool isFirstAccess = NO;
         NSString *path24 = [[NSBundle mainBundle] pathForResource:@"yoga" ofType:@"png"];
         NSString *path25 = [[NSBundle mainBundle] pathForResource:@"zebra" ofType:@"png"];
         
+        //Inicializaçao do Vetor que contem as letras
         _abecedario = [[NSMutableArray alloc] initWithObjects:
                        [[Letra alloc] initWithLetra:@"A" andImagem:path andPalavra:@"Árvore"],
                        [[Letra alloc] initWithLetra:@"B" andImagem:path1 andPalavra:@"Bola"],
